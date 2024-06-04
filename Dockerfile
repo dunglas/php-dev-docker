@@ -64,7 +64,7 @@ RUN cd /usr/src/ && \
     make install
 
 RUN cd /usr/src/ && \
-    git clone --branch=PHP-8.2 https://github.com/php/php-src.git && \
+    git clone https://github.com/php/php-src.git && \
     cd php-src && \
     # --enable-embed is only necessary to generate libphp.so, we don't use this SAPI directly
     ./buildconf -f && \
